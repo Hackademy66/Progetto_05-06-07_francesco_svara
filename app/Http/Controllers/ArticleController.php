@@ -14,6 +14,13 @@ class ArticleController extends Controller
         //return view('articles', ['articles' => $articles]);
         return view('articles', compact('articles'));
     }
+
+    public function article_show($id) {
+    $article = Article::findOrFail($id);
+    return view('article-dettaglio', ['article' => $article]);
+}
+
+
     
     public function create() {
         return view('article.create');
