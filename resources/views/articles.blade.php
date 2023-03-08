@@ -23,7 +23,6 @@
                     <h3>{{$article->producer}}</h3>
                     <p class="card-text lead my-3 fs-6">by Francesco Svara</p>
                     <a href="{{route('article-dettaglio', ['id' => $article->id])}}" class="stretched-link">Leggi di più</a>
-
                 </div>
             </div>
         </div>

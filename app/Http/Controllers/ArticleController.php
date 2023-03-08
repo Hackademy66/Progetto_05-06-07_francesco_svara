@@ -9,6 +9,11 @@ use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth')->except('articles', 'article_show');
+    }
+
     public function articles() {
         $articles = Article::all();
         //return view('articles', ['articles' => $articles]);
@@ -19,7 +24,6 @@ class ArticleController extends Controller
     $article = Article::findOrFail($id);
     return view('article-dettaglio', ['article' => $article]);
 }
-
 
     
     public function create() {
