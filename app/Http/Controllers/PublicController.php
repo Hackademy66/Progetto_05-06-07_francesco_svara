@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
+
+    public function __construct() {
+
+    }
+
     public function homepage() {
         return view('homepage');
     }

@@ -22,7 +22,7 @@ class ArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|min:3|max:30',
+            'title' => 'required|min:1|max:30',
             'producer' => 'required|min:3|max:40',
             'cover' => 'required|image',
             'description' => 'required|min:3|max:120',
@@ -33,7 +33,7 @@ class ArticleRequest extends FormRequest
     {
         return [
             'title.required' => "E' necessario inserire il titolo",
-            'title.min' => "Il titolo dev'essere lungo almeno 3 caratteri",
+            'title.min' => "Il titolo dev'essere lungo almeno un carattere",
             'title.max' => "Il titolo non deve superare i 30 caratteri",
             'producer.required' => "E' necessario inserire il produttore",
             'producer.min' => "Il produttore dev'essere lungo almeno 3 caratteri",

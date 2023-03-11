@@ -11,7 +11,7 @@ class ArticleController extends Controller
 {
 
     public function __construct() {
-        $this->middleware('auth')->except('articles', 'article_show');
+        $this->middleware('auth')->only('create');
     }
 
     public function articles() {
